@@ -1,4 +1,4 @@
-# Angular14 & 14+ Dual-Listbox 
+# Angular14 & 15 Dual-Listbox 
 
 The **cm-angular-dual-listbox** is an Angular 14 component that provides two lists controls side-by-side that allows items in one list to be selected and moved* to the other list via drag-and-drop and/or a button-based interface. 
 The component supports multiple select options from the list, programatic setting of list sources, and layout with direction and button formatting.
@@ -12,10 +12,19 @@ The component supports multiple select options from the list, programatic settin
 
 ## Table of Contents
 
+ * [Version](#Version)
  * [Usage](#usage)
  * [Inputs](#inputs)
  * [Outputs](#outputs)
  * [Final Usage](#final-usage)
+
+
+## Version
+
+| Angular | angular-dual-listbox |
+|---|---|
+|`15`|`2.1.1`|
+|`14`|`1.0.0`|
 
 
 ## Usege
