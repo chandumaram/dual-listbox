@@ -1,13 +1,13 @@
-# Angular14 & 15 Dual-Listbox 
+# Angular Dual-Listbox (v14, v15 and v16)
 
-The **cm-angular-dual-listbox** is an Angular 14 component that provides two lists controls side-by-side that allows items in one list to be selected and moved* to the other list via drag-and-drop and/or a button-based interface. 
+The **angular-dual-listbox** is an Angular component that provides two lists controls side-by-side that allows items in one list to be selected and moved* to the other list via drag-and-drop and/or a button-based interface. 
 The component supports multiple select options from the list, programatic setting of list sources, and layout with direction and button formatting.
 
 <!-- A [working demo](http://czeckd.github.io/angular-dual-listbox/) shows the dual listbox in action.
 
 \* Technically, the dual-list component does not move items from one array to another. Rather it makes a copy from the source array of the item and adds it to the destination array, or removes it from the destination array. Thus, the source array is a master list of all available item and the destintion array is a list of items that have been selected from the master list. Therefore, in order for an item to be in the destination array it must also exist in the source array. -->
 
-![Dual ListBox](https://github.com/chandumaram/dual-listbox/blob/master/src/assets/dual-listbox.png)
+![Dual ListBox](https://raw.githubusercontent.com/czeckd/angular-dual-listbox/master/images/dual-listbox.png)
 
 
 ## Table of Contents
@@ -23,6 +23,7 @@ The component supports multiple select options from the list, programatic settin
 
 | Angular | angular-dual-listbox |
 |---|---|
+|`16`|`3.0.0`|
 |`15`|`2.1.1`|
 |`14`|`1.0.0`|
 
@@ -64,7 +65,6 @@ export class AppModule { }
 
 ### `app.component.ts`:
 ```js
-import { AngularDualListboxComponent } from 'cm-angular-dual-listbox';
 export class AppComponent {
 
   employeeImage = "assets/employee.png";
@@ -80,23 +80,16 @@ export class AppComponent {
 
   confirmed: any[] = [];
 
-      UserFormat = {
-        add: 'Add Users',
-        remove: 'Remove Users',
-        all: 'Select All',
-        none: 'De-select All',
-        direction: AngularDualListboxComponent.LTR,
-        draggable: true
+  format = { 
+    add: 'Add', 
+    remove: 'Remove', 
+    all: 'All', 
+    none: 'None', 
+    direction: CmAngularDualListboxComponent.LTR, 
+    draggable: true 
     };
-
 }
 ```
-
-### Add Styles by
-
-1. $ npm install bootstrap
-2. add  @import "../node_modules/bootstrap/scss/bootstrap"; in your styles.scss file
-
 
 ## Inputs
 
@@ -105,7 +98,7 @@ export class AppComponent {
 |`key`| The unique identifier field of each object in the `source` and `destination` arrays, default is ``_id``. (Note: with a source of an array of strings, each string is its own id.)
 |`display`| The field of each object for displaying the object each the lists, default is ``_name``. Or, a function that returns a string that can be used for displaying an object. (Note: with a source of an array of strings, each string is its own display.)
 |`height`| The height of the lists, default is ``100px``.
-|`format`| A format object, default is ``{ add: 'Add', remove: 'Remove', all: 'All', none: 'None', direction: 'left-to-right', draggable: true }``
+|`format`| A format object, default is ``{ add: 'Add', remove: 'Remove', all: 'All', none: 'None', direction: 'left-to-right', draggable: true, locale: undefined }``
 |`filter`| A boolean whether or not to display a filter for the lists, default is ``false``. 
 |`sort`| A boolean whether or not to keep the lists sorted, default is ``false``.
 |`compare`| A compare function to be used for sorting the lists. Note if sort is not set and compare is set, then sort will be set ``true``.
