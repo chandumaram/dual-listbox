@@ -2,10 +2,9 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { CmAngularDualListboxModule } from 'cm-angular-dual-listbox';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CmAngularDualListboxComponent } from 'cm-angular-dual-listbox';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    CmAngularDualListboxModule
+    CmAngularDualListboxComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
